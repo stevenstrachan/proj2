@@ -17,10 +17,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.gaussian_process.kernels import RBF
-from sklearn.gaussian_process.kernels import DotProduct
 from sklearn.gaussian_process.kernels import Matern
-from sklearn.gaussian_process.kernels import RationalQuadratic
-from sklearn.gaussian_process.kernels import WhiteKernel
 from sklearn.neural_network import MLPClassifier
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.ensemble import RandomForestClassifier
@@ -32,7 +29,7 @@ import matplotlib.pyplot as plt
 
 #CLEANING
 #%%%
-df = pd.read_csv("C:\\Users\\19896\\Downloads\\OPTIONS DF\\Trady Flow - Best Options Trade Ideas.csv")
+df = pd.read_csv("Trady Flow - Best Options Trade Ideas.csv")
 df = df.drop(['Time', 'Orders', 'Exp'], axis = 1)
 
 Vol = np.array([])
