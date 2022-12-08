@@ -916,6 +916,13 @@ with tab10:
     '\n'
     '\n'
     '\n'
+    st.markdown("<h6 style='text-align: center; color: gray;'> Receiver Operating Characteristic Curve: </h6>", unsafe_allow_html=True)
+    y_pred = best_pipe.predict(X_test_scaled)
+    RocCurveDisplay.from_predictions(y_test, y_pred).plot(color = 'k', ls = '--')
+    st.pyplot()
+    '\n'
+    '\n'
+    '\n'
     st.markdown("<h6 style='text-align: center; color: gray;'>Additionally, here is the full classification report: </h6>", unsafe_allow_html=True)
     x = classification_report(y_test, y_pred, output_dict = True)
     st.table(x)
